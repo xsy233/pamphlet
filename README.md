@@ -69,4 +69,5 @@ leafletMap.setView(scalajs.js.Array(x,y), z)
 <br/><br/>
 
 We develop <em>pamphlet</em> with <b>λ</b> at <a href="http://plasmap.io"><b>plasmap</b></a>.
+Follow <a href="https://twitter.com/plasmapio">@plasmapio</a> on twitter.
 </p>
