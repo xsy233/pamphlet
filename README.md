@@ -60,10 +60,10 @@ tileLayer.addTo(leafletMap)
 leafletMap.setView(scalajs.js.Array(x,y), z)
 ```
 
-#### plasmap
+#### I want to talk to the manager!
 
 <p align="center">
-[![plasmap](https://avatars3.githubusercontent.com/u/10074281?v=3&s=100)](http://www.plasmap.io)</br></br>
+<img src="https://avatars3.githubusercontent.com/u/10074281?v=3&s=100" alt="plasmap-logo"><br/><br/>
 
-We develop *pamphlet* with **λ** at [**plasmap**](http://plasmap.io).
+We develop <em>pamphlet</em> with <b>λ</b> at <a href="http://plasmap.io"><b>plasmap</b></a>.
 </p>
