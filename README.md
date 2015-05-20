@@ -63,7 +63,10 @@ leafletMap.setView(scalajs.js.Array(x,y), z)
 #### I want to talk to the manager!
 
 <p align="center">
-<img src="https://avatars3.githubusercontent.com/u/10074281?v=3&s=100" alt="plasmap-logo"><br/><br/>
+<a href="http://plasmap.io">
+  <img src="https://avatars3.githubusercontent.com/u/10074281?v=3&s=100" alt="plasmap-logo">
+</a>
+<br/><br/>
 
 We develop <em>pamphlet</em> with <b>λ</b> at <a href="http://plasmap.io"><b>plasmap</b></a>.
 </p>
