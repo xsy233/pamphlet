@@ -1,7 +1,7 @@
 # pamphlet
 pamphlet is a leafletjs (http://leaflet.js.com) façade for ScalaJS.
-It claims neither completeness nor correctness.
 
+It claims neither completeness nor correctness.
 However, its focus lies on the latter.
 
 1. [Getting pamphlet](#getting-it)
