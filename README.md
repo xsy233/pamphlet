@@ -1,5 +1,5 @@
 # pamphlet
-pamphlet is a leafletjs (http://leaflet.js.com) façade for ScalaJS.
+pamphlet is a leafletjs (http://leafletjs.com) façade for ScalaJS.
 
 It claims neither completeness nor correctness.
 However, its focus lies on the latter.
