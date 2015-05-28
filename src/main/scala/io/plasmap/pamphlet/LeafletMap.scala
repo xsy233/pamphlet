@@ -47,7 +47,7 @@ trait LeafletMap extends js.Object {
   def locationerror(e:LeafletErrorEvent) = js.native
   def popupopen(e:PopupEvent) = js.native
   def popupclose(e:PopupEvent) = js.native
-
+  def getPanes():MapPanes = js.native
 }
 
 trait FitBoundsOptions extends js.Object

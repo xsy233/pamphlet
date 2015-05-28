@@ -60,7 +60,7 @@ tileLayer.addTo(leafletMap)
 leafletMap.setView(scalajs.js.Array(x,y), z)
 ```
 
-#### I want to talk to the manager!
+## I want to talk to the manager!
 
 <p align="center">
 <a href="http://plasmap.io">
