@@ -1,5 +1,5 @@
 # pamphlet
-pamphlet is a leafletjs (http://leaflet.js.com) façade for ScalaJS.
+pamphlet is a leafletjs (http://leafletjs.com) façade for ScalaJS.
 
 It claims neither completeness nor correctness.
 However, its focus lies on the latter.
@@ -15,7 +15,7 @@ resolvers += "Sonatype snapshots" at "https://oss.sonatype.org/content/repositor
 ```
 Then add the dependency.
 ```scala
-libraryDependencies += "io.plasmap" % "pamphlet" % "0.1-SNAPSHOT"
+libraryDependencies += "io.plasmap" %%% "pamphlet" % "0.1-SNAPSHOT"
 ```
 
 ## Example
