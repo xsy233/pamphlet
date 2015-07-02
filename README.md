@@ -35,7 +35,7 @@ libraryDependencies += "io.plasmap" %%% "pamphlet" % "0.1-SNAPSHOT"
 
 #### ScalaJS
 ```scala
-val cssId = "#leafletmap"
+val cssId = "leafletmap" //expects this to be an ID, i.e. <div id="leafletmap"></div>
 val conf = LeafletMapOptions.zoomControl(true).scrollWheelZoom(false).build
 val leafletMap = Leaflet.map(cssId, conf).setView(scalajs.js.Array(51.505f, -0.09f), 13)
 val Token = "your-token" //Make sure to replace this with your mapbox public token
