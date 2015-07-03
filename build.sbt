@@ -2,7 +2,7 @@ enablePlugins(ScalaJSPlugin)
 
 name := "pamphlet"
 
-version := "0.1-SNAPSHOT"
+version := "0.2-SNAPSHOT"
 
 organization := "io.plasmap"
 
@@ -10,7 +10,7 @@ licenses += ("Apache-2.0", url("https://www.apache.org/licenses/LICENSE-2.0.html
 
 scmInfo := Some(ScmInfo(
   url("https://github.com/plasmap/pamphlet"),
-  "scm:git:git@github.com/plasmap/pamphlet.get",
+  "scm:git:git@github.com/plasmap/pamphlet.git",
   Some("scm:git@github.com/plasmap/pamphlet.git")
 ))
 

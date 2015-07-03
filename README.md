@@ -15,7 +15,7 @@ resolvers += "Sonatype snapshots" at "https://oss.sonatype.org/content/repositor
 ```
 Then add the dependency.
 ```scala
-libraryDependencies += "io.plasmap" %%% "pamphlet" % "0.1-SNAPSHOT"
+libraryDependencies += "io.plasmap" %%% "pamphlet" % "0.2-SNAPSHOT"
 ```
 
 ## Example

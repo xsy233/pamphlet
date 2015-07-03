@@ -9,7 +9,7 @@ object GeoJsonLayerOptions extends GeoJsonOptionBuilder(Map.empty[String, Any])
 class GeoJsonOptionBuilder(val dict:Map[String, Any]) extends
   JSOptionBuilder[GeoJsonLayerOptions, GeoJsonOptionBuilder](new GeoJsonOptionBuilder(_)) {
 
-  def pointToLayer(v:js.Function2[js.Object, LeafletLatLng, Unit]) = jsOpt("pointToLayer", v)
+  def pointToLayer(v:js.Function2[js.Object, LeafletLatLng, ILayer]) = jsOpt("pointToLayer", v)
   def style(v:js.Function1[js.Object, Unit]) = jsOpt("style", v)
   def onEachFeature(v:js.Function2[js.Object, ILayer, Unit]) = jsOpt("onEachFeature", v)
   def filter(v:js.Function2[js.Object, ILayer, Unit]) = jsOpt("filter", v)
