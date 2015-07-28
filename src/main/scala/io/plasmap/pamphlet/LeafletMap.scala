@@ -49,7 +49,7 @@ trait LeafletMap extends js.Object {
   def popupclose(e:PopupEvent) = js.native
   def getPanes():MapPanes = js.native
   def on(eventName:String, fn:js.Any) = js.native
-  def off(eventName:String, fn:js.Any) = js.native
+  def off(eventName:String) = js.native
   def clearAllEventListeners() = js.native
 }
 
@@ -64,14 +64,14 @@ object LeafletMap {
     def onMouseMove  (cb: LeafletMouseEvent ⇒ Unit): Unit = self.on("mousemove", cb)
     def contextMenu  (cb: LeafletMouseEvent ⇒ Unit): Unit = self.on("contextmenu", cb)
 
-    def disableOnClick      (cb: LeafletMouseEvent ⇒ Unit): Unit = self.off("click", cb)
-    def disableOnDoubleClick(cb: LeafletMouseEvent ⇒ Unit): Unit = self.off("doubleclick", cb)
-    def disableOnMouseDown  (cb: LeafletMouseEvent ⇒ Unit): Unit = self.off("mousedown", cb)
-    def disableOnMouseUp    (cb: LeafletMouseEvent ⇒ Unit): Unit = self.off("mouseup", cb)
-    def disableOnMouseOver  (cb: LeafletMouseEvent ⇒ Unit): Unit = self.off("mouseover", cb)
-    def disableOnMouseOut   (cb: LeafletMouseEvent ⇒ Unit): Unit = self.off("mouseout", cb)
-    def disableOnMouseMove  (cb: LeafletMouseEvent ⇒ Unit): Unit = self.off("mousemove", cb)
-    def disableContextMenu  (cb: LeafletMouseEvent ⇒ Unit): Unit = self.off("contextmenu", cb)
+    def disableOnClick      (cb: LeafletMouseEvent ⇒ Unit): Unit = self.off("click")
+    def disableOnDoubleClick(cb: LeafletMouseEvent ⇒ Unit): Unit = self.off("doubleclick")
+    def disableOnMouseDown  (cb: LeafletMouseEvent ⇒ Unit): Unit = self.off("mousedown")
+    def disableOnMouseUp    (cb: LeafletMouseEvent ⇒ Unit): Unit = self.off("mouseup")
+    def disableOnMouseOver  (cb: LeafletMouseEvent ⇒ Unit): Unit = self.off("mouseover")
+    def disableOnMouseOut   (cb: LeafletMouseEvent ⇒ Unit): Unit = self.off("mouseout")
+    def disableOnMouseMove  (cb: LeafletMouseEvent ⇒ Unit): Unit = self.off("mousemove")
+    def disableContextMenu  (cb: LeafletMouseEvent ⇒ Unit): Unit = self.off("contextmenu")
   }
 }
 
