@@ -48,7 +48,32 @@ trait LeafletMap extends js.Object {
   def popupopen(e:PopupEvent) = js.native
   def popupclose(e:PopupEvent) = js.native
   def getPanes():MapPanes = js.native
+  def on(eventName:String, fn:js.Any) = js.native
+  def off(eventName:String, fn:js.Any) = js.native
 }
+
+object LeafletMap {
+  implicit class OnHandlers(val self: LeafletMap) extends AnyVal {
+    def onClick      (cb: LeafletMouseEvent ⇒ Unit): Unit = self.on("click", cb)
+    def onDoubleClick(cb: LeafletMouseEvent ⇒ Unit): Unit = self.on("doubleclick", cb)
+    def onMouseDown  (cb: LeafletMouseEvent ⇒ Unit): Unit = self.on("mousedown", cb)
+    def onMouseUp    (cb: LeafletMouseEvent ⇒ Unit): Unit = self.on("mouseup", cb)
+    def onMouseOver  (cb: LeafletMouseEvent ⇒ Unit): Unit = self.on("mouseover", cb)
+    def onMouseOut   (cb: LeafletMouseEvent ⇒ Unit): Unit = self.on("mouseout", cb)
+    def onMouseMove  (cb: LeafletMouseEvent ⇒ Unit): Unit = self.on("mousemove", cb)
+    def contextMenu  (cb: LeafletMouseEvent ⇒ Unit): Unit = self.on("contextmenu", cb)
+
+    def disableOnClick      (cb: LeafletMouseEvent ⇒ Unit): Unit = self.off("click", cb)
+    def disableOnDoubleClick(cb: LeafletMouseEvent ⇒ Unit): Unit = self.off("doubleclick", cb)
+    def disableOnMouseDown  (cb: LeafletMouseEvent ⇒ Unit): Unit = self.off("mousedown", cb)
+    def disableOnMouseUp    (cb: LeafletMouseEvent ⇒ Unit): Unit = self.off("mouseup", cb)
+    def disableOnMouseOver  (cb: LeafletMouseEvent ⇒ Unit): Unit = self.off("mouseover", cb)
+    def disableOnMouseOut   (cb: LeafletMouseEvent ⇒ Unit): Unit = self.off("mouseout", cb)
+    def disableOnMouseMove  (cb: LeafletMouseEvent ⇒ Unit): Unit = self.off("mousemove", cb)
+    def disableContextMenu  (cb: LeafletMouseEvent ⇒ Unit): Unit = self.off("contextmenu", cb)
+  }
+}
+
 
 trait FitBoundsOptions extends js.Object
 object FitBoundsOptions extends FitBoundsOptionBuilder(Map.empty[String, Any])
