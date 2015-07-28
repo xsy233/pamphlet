@@ -50,6 +50,7 @@ trait LeafletMap extends js.Object {
   def getPanes():MapPanes = js.native
   def on(eventName:String, fn:js.Any) = js.native
   def off(eventName:String, fn:js.Any) = js.native
+  def clearAllEventListeners() = js.native
 }
 
 object LeafletMap {
