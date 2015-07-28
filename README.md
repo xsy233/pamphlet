@@ -17,7 +17,10 @@ Then add the dependency.
 ```scala
 libraryDependencies += "io.plasmap" %%% "pamphlet" % "0.2-SNAPSHOT"
 ```
-
+Import the following to get going.
+```scala
+import io.plasmap.pamphlet._, Leaflet._
+```
 ## Example
 #### HTML (using Play here)
 ```html
