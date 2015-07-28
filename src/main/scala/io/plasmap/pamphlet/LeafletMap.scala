@@ -64,7 +64,7 @@ object LeafletMap {
     def onMouseMove  (cb: LeafletMouseEvent ⇒ Unit): Unit = self.on("mousemove", cb)
     def contextMenu  (cb: LeafletMouseEvent ⇒ Unit): Unit = self.on("contextmenu", cb)
 
-    def disableOnClick      (cb: LeafletMouseEvent ⇒ Unit): Unit = self.off("click")
+    def disableOnClick      (cb: LeafletMouseEvent ⇒ Unit): Unit = self.off("click", cb)
     def disableOnDoubleClick(cb: LeafletMouseEvent ⇒ Unit): Unit = self.off("doubleclick", cb)
     def disableOnMouseDown  (cb: LeafletMouseEvent ⇒ Unit): Unit = self.off("mousedown", cb)
     def disableOnMouseUp    (cb: LeafletMouseEvent ⇒ Unit): Unit = self.off("mouseup", cb)
