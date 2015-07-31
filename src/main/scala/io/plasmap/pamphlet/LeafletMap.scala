@@ -10,6 +10,7 @@ trait LeafletMap extends js.Object {
   def setZoom(level:Int):LeafletMap = js.native
   def getZoom():Int = js.native
   def fitBounds(bounds:LatLngBounds, options:FitBoundsOptions = ???):LeafletMap = js.native
+  def getBounds():LatLngBounds = js.native
   def addLayer(layer:ILayer):LeafletMap = js.native
   def removeLayer(layer:ILayer):LeafletMap = js.native
   def hasLayer(layer:ILayer):Boolean = js.native
@@ -49,7 +50,7 @@ trait LeafletMap extends js.Object {
   def popupclose(e:PopupEvent) = js.native
   def getPanes():MapPanes = js.native
   def on(eventName:String, fn:js.Any) = js.native
-  def off(eventName:String, fn:js.Any) = js.native
+  def off(eventName:String) = js.native
   def clearAllEventListeners() = js.native
 }
 
@@ -64,14 +65,14 @@ object LeafletMap {
     def onMouseMove  (cb: LeafletMouseEvent ⇒ Unit): Unit = self.on("mousemove", cb)
     def contextMenu  (cb: LeafletMouseEvent ⇒ Unit): Unit = self.on("contextmenu", cb)
 
-    def disableOnClick      (cb: LeafletMouseEvent ⇒ Unit): Unit = self.off("click", cb)
-    def disableOnDoubleClick(cb: LeafletMouseEvent ⇒ Unit): Unit = self.off("doubleclick", cb)
-    def disableOnMouseDown  (cb: LeafletMouseEvent ⇒ Unit): Unit = self.off("mousedown", cb)
-    def disableOnMouseUp    (cb: LeafletMouseEvent ⇒ Unit): Unit = self.off("mouseup", cb)
-    def disableOnMouseOver  (cb: LeafletMouseEvent ⇒ Unit): Unit = self.off("mouseover", cb)
-    def disableOnMouseOut   (cb: LeafletMouseEvent ⇒ Unit): Unit = self.off("mouseout", cb)
-    def disableOnMouseMove  (cb: LeafletMouseEvent ⇒ Unit): Unit = self.off("mousemove", cb)
-    def disableContextMenu  (cb: LeafletMouseEvent ⇒ Unit): Unit = self.off("contextmenu", cb)
+    def disableAllOnClick      (cb: LeafletMouseEvent ⇒ Unit): Unit = self.off("click")
+    def disableAllOnDoubleClick(cb: LeafletMouseEvent ⇒ Unit): Unit = self.off("doubleclick")
+    def disableAllOnMouseDown  (cb: LeafletMouseEvent ⇒ Unit): Unit = self.off("mousedown")
+    def disableAllOnMouseUp    (cb: LeafletMouseEvent ⇒ Unit): Unit = self.off("mouseup")
+    def disableAllOnMouseOver  (cb: LeafletMouseEvent ⇒ Unit): Unit = self.off("mouseover")
+    def disableAllOnMouseOut   (cb: LeafletMouseEvent ⇒ Unit): Unit = self.off("mouseout")
+    def disableAllOnMouseMove  (cb: LeafletMouseEvent ⇒ Unit): Unit = self.off("mousemove")
+    def disableAllContextMenu  (cb: LeafletMouseEvent ⇒ Unit): Unit = self.off("contextmenu")
   }
 }
 
