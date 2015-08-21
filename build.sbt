@@ -2,7 +2,7 @@ enablePlugins(ScalaJSPlugin)
 
 name := "pamphlet"
 
-version := "0.4-SNAPSHOT"
+version := "0.5-SNAPSHOT"
 
 organization := "io.plasmap"
 
@@ -46,5 +46,5 @@ testFrameworks += new TestFramework("utest.runner.Framework")
 
 libraryDependencies ++= Seq(
   "org.scala-js" %%% "scalajs-dom" % "0.8.0",
-  "com.lihaoyi" %%% "utest" % "0.3.0" % "test"
+  "com.lihaoyi"  %%% "utest" % "0.3.0" % "test"
 )
