@@ -6,7 +6,7 @@ import io.plasmap.util.Helpers.JSOptionBuilder
 import scala.scalajs.js
 
 trait LeafletMap extends js.Object {
-  def setView(coordinates:js.Array[Float], zoomLevel:Int):LeafletMap = js.native
+  def setView(coordinates:LeafletLatLng, zoomLevel:Int):LeafletMap = js.native
   def setZoom(level:Int):LeafletMap = js.native
   def getZoom():Int = js.native
   def fitBounds(bounds:LatLngBounds, options:FitBoundsOptions = ???):LeafletMap = js.native
@@ -56,14 +56,22 @@ trait LeafletMap extends js.Object {
 
 object LeafletMap {
   implicit class OnHandlers(val self: LeafletMap) extends AnyVal {
-    def onClick      (cb: LeafletMouseEvent ⇒ Unit): Unit = self.on("click", cb)
-    def onDoubleClick(cb: LeafletMouseEvent ⇒ Unit): Unit = self.on("doubleclick", cb)
-    def onMouseDown  (cb: LeafletMouseEvent ⇒ Unit): Unit = self.on("mousedown", cb)
-    def onMouseUp    (cb: LeafletMouseEvent ⇒ Unit): Unit = self.on("mouseup", cb)
-    def onMouseOver  (cb: LeafletMouseEvent ⇒ Unit): Unit = self.on("mouseover", cb)
-    def onMouseOut   (cb: LeafletMouseEvent ⇒ Unit): Unit = self.on("mouseout", cb)
-    def onMouseMove  (cb: LeafletMouseEvent ⇒ Unit): Unit = self.on("mousemove", cb)
-    def contextMenu  (cb: LeafletMouseEvent ⇒ Unit): Unit = self.on("contextmenu", cb)
+    def onClick      (cb: LeafletMouseEvent ⇒ Unit): Unit = self.on("click"       , cb)
+    def onDoubleClick(cb: LeafletMouseEvent ⇒ Unit): Unit = self.on("doubleclick" , cb)
+    def onMouseDown  (cb: LeafletMouseEvent ⇒ Unit): Unit = self.on("mousedown"   , cb)
+    def onMouseUp    (cb: LeafletMouseEvent ⇒ Unit): Unit = self.on("mouseup"     , cb)
+    def onMouseOver  (cb: LeafletMouseEvent ⇒ Unit): Unit = self.on("mouseover"   , cb)
+    def onMouseOut   (cb: LeafletMouseEvent ⇒ Unit): Unit = self.on("mouseout"    , cb)
+    def onMouseMove  (cb: LeafletMouseEvent ⇒ Unit): Unit = self.on("mousemove"   , cb)
+    def contextMenu  (cb: LeafletMouseEvent ⇒ Unit): Unit = self.on("contextmenu" , cb)
+
+    def onDragEnd    (cb: DragEndEvent      ⇒ Unit): Unit = self.on("dragend"     , cb)
+    def onDrag       (cb: LeafletEvent      ⇒ Unit): Unit = self.on("drag"        , cb)
+    def onDragStart  (cb: LeafletEvent      ⇒ Unit): Unit = self.on("dragstart"   , cb)
+    def onZoomStart  (cb: LeafletEvent      ⇒ Unit): Unit = self.on("zoomstart"   , cb)
+    def onZoomEnd    (cb: LeafletEvent      ⇒ Unit): Unit = self.on("zoomend"     , cb)
+    def onResize     (cb: ResizeEvent       ⇒ Unit): Unit = self.on("resize"      , cb)
+    def onMoveEnd    (cb: LeafletEvent      ⇒ Unit): Unit = self.on("moveend"     , cb)
 
     def disableAllOnClick      (cb: LeafletMouseEvent ⇒ Unit): Unit = self.off("click")
     def disableAllOnDoubleClick(cb: LeafletMouseEvent ⇒ Unit): Unit = self.off("doubleclick")

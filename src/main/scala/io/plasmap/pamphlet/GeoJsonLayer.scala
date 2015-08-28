@@ -23,6 +23,7 @@ class GeoJsonOptionBuilder(val dict:Map[String, Any]) extends
   def fill(v:Boolean) = jsOpt("fill", v)
   def fillColor(v:String) = jsOpt("fillColor", v)
   def fillOpacity(v:Double) = jsOpt("fillOpacity", v)
+  def fillRule(v:String) = jsOpt("fillRule", v)
   def dashArray(v:String) = jsOpt("dashArray", v)
   def lineCap(v:String) = jsOpt("lineCap", v)
   def lineJoin(v:String) = jsOpt("lineJoin", v)
