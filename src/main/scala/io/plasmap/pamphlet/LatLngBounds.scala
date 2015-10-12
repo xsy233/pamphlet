@@ -7,6 +7,7 @@ import scala.scalajs.js
  */
 trait LatLngBounds extends js.Object {
   def extend(latLng:LeafletLatLng):LatLngBounds = js.native
+  def extend(latLng:LatLngBounds):LatLngBounds = js.native
   def getSouthWest():LeafletLatLng = js.native
   def getNorthEast():LeafletLatLng = js.native
   def getNorthWest():LeafletLatLng = js.native
