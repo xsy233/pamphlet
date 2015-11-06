@@ -2,7 +2,7 @@ enablePlugins(ScalaJSPlugin)
 
 name := "pamphlet"
 
-version := "0.7-SNAPSHOT"
+version := "0.8-SNAPSHOT"
 
 organization := "io.plasmap"
 
