@@ -60,7 +60,7 @@ val tileLayerOptions = TileLayerOptions
 
 val tileLayer = Leaflet.tileLayer(uri, tileLayerOptions)
 tileLayer.addTo(leafletMap)
-leafletMap.setView(scalajs.js.Array(x,y), z)
+leafletMap.setView(Leaflet.latLng(x, y), z)
 ```
 
 ## I want to talk to the manager!
