@@ -40,7 +40,7 @@ import io.plasmap.pamphlet._, Leaflet._
 ```scala
 val cssId = "leafletmap" //expects this to be an ID, i.e. <div id="leafletmap"></div>
 val conf = LeafletMapOptions.zoomControl(true).scrollWheelZoom(false).build
-val leafletMap = Leaflet.map(cssId, conf).setView(scalajs.js.Array(51.505f, -0.09f), 13)
+val leafletMap = Leaflet.map(cssId, conf).setView(Leaflet.latLng(51.505f, -0.09f), 13)
 val Token = "your-token" //Make sure to replace this with your mapbox public token
 val MapId = "examples.map-i86nkdio"
 val Attribution = "Map data &copy; <a href=\"http://openstreetmap.org\">OpenStreetMap</a> contributors, <a href=\"http://creativecommons.org/licenses/by-sa/2.0/\">CC-BY-SA</a>, Imagery © <a href=\"http://mapbox.com\">Mapbox</a>"
