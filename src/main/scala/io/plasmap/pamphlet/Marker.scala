@@ -8,27 +8,27 @@ import scala.scalajs.js
  * Created by mark on 26.02.15.
  */
 trait Marker extends ILayer {
-  def addTo(map:LeafletMap):Marker = js.native
+  def addTo(map:LeafletMap):Circle = js.native
   def getLatLng():LeafletLatLng = js.native
-  def setLatLng(latlng:LeafletLatLng):Marker = js.native
-  def setIcon(icon:Icon):Marker = js.native
-  def setZIndexOffset(offset:Int):Marker = js.native
-  def setOpacity(opacity:Double):Marker = js.native
-  def update():Marker = js.native
-  def bindPopup(html:String, popupOptions:LeafletPopupOptions = ???):Marker = js.native
-  def unbindPopup():Marker = js.native
-  def openPopup():Marker = js.native
+  def setLatLng(latlng:LeafletLatLng):Circle = js.native
+  def setIcon(icon:Icon):Circle = js.native
+  def setZIndexOffset(offset:Int):Circle = js.native
+  def setOpacity(opacity:Double):Circle = js.native
+  def update():Circle = js.native
+  def bindPopup(html:String, popupOptions:LeafletPopupOptions = ???):Circle = js.native
+  def unbindPopup():Circle = js.native
+  def openPopup():Circle = js.native
   def getPopup():LeafletPopup = js.native
-  def closePopup():Marker = js.native
-  def togglePopup():Marker = js.native
+  def closePopup():Circle = js.native
+  def togglePopup():Circle = js.native
   def toGeoJSON():js.Object = js.native
-  def on(`type`:String, fn:js.Function1[LeafletEvents.LeafletEvent,Unit]):Marker = js.native
+  def on(`type`:String, fn:js.Function1[LeafletEvents.LeafletEvent,Unit]):Circle = js.native
 }
 
 trait MarkerOptions extends js.Object
-object MarkerOptions extends MarkerOptionBuilder(Map.empty[String, Any])
+object MarkerOptions extends CircleOptionBuilder(Map.empty[String, Any])
 class MarkerOptionBuilder(val dict:Map[String, Any]) extends
- JSOptionBuilder[MarkerOptions, MarkerOptionBuilder](new MarkerOptionBuilder(_)) {
+ JSOptionBuilder[MarkerOptions, CircleOptionBuilder](new CircleOptionBuilder(_)) {
 
   def icon(v:Icon) = jsOpt("icon", v)
   def clickable(v:Boolean) = jsOpt("clickable", v)
