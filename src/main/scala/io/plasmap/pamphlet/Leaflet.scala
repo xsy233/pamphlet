@@ -28,7 +28,7 @@ object Leaflet extends js.Object {
 
   def icon(iconOptions: IconOptions): Icon = js.native
 
-  def marker(latLng: LeafletLatLng, markerOptions: MarkerOptions = ???): Circle = js.native
+  def marker(latLng: LeafletLatLng, markerOptions: MarkerOptions = ???): Marker = js.native
 
   def latLng(lat: Double, lng: Double): LeafletLatLng = js.native
 
